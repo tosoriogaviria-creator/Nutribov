@@ -24,6 +24,8 @@
 
 ---
 
+# enlace a la landing:https://tosoriogaviria-creator.github.io/Nutribov/
+
 ## 📋 Tabla de Contenido
 - [📖 Descripción del Proyecto](#-descripción-del-proyecto)
 - [✨ Características Principales](#-características-principales)
