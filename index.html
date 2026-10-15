@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SalBovino Pro | Nutrición y Sales Mineralizadas en Bovinos</title>
+  <meta name="description" content="Plataforma técnica de nutrición y suplementación con sales mineralizadas en bovinos. Infografía técnica, calculadora de consumo, antagonismos minerales, skill de IA y bibliografía científica NRC/FEDNA.">
+  <meta name="keywords" content="sales mineralizadas bovinos, nutrición animal, zootecnia, fósforo, calcio, NRC ganado, suplementación mineral rumiantes">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for scientific and agricultural symbols -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="top-banner">
+    <div class="container banner-inner">
+      <span class="badge badge-pulse"><i class="fas fa-atom"></i> Zootecnia Científica</span>
+      <p class="banner-text">Guía técnica y clínica de suplementación mineral en rumiantes bajo estándares <strong>NRC / NASEM & FEDNA</strong></p>
+      <a href="#calculadora" class="banner-link">Calcular consumo <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" id="brandLogo">
+        <div class="logo-icon-wrap">
+          <i class="fas fa-cow logo-icon"></i>
+          <span class="mineral-sparkle"><i class="fas fa-certificate"></i></span>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">SalBovino<span class="brand-accent">Pro</span></span>
+          <span class="brand-tag">Nutrición & Metabolismo Mineral</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#fundamentos" class="nav-link"><i class="fas fa-vial"></i> Fundamentos</a>
+        <a href="#infografia" class="nav-link"><i class="fas fa-image"></i> Infografía</a>
+        <a href="#minerales" class="nav-link"><i class="fas fa-cubes"></i> Elementos</a>
+        <a href="#antagonismos" class="nav-link"><i class="fas fa-project-diagram"></i> Antagonismos</a>
+        <a href="#calculadora" class="nav-link"><i class="fas fa-calculator"></i> Calculadora</a>
+        <a href="#skill-ia" class="nav-link nav-highlight"><i class="fas fa-brain"></i> Skill SalBovino</a>
+        <a href="#laboratorio" class="nav-link"><i class="fas fa-microscope"></i> Calidad</a>
+        <a href="#bibliografia" class="nav-link"><i class="fas fa-book-bookmark"></i> Bibliografía</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#calculadora" class="btn btn-primary btn-sm"><i class="fas fa-sliders"></i> Simular Hato</a>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Abrir menú">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-text-col">
+          <div class="hero-badge">
+            <span class="dot-live"></span> Especialidad en Fisiología y Nutrición de Rumiantes
+          </div>
+          <h1 class="hero-title">
+            Sales Mineralizadas en Bovinos: <span class="gradient-text">Salud, Fertilidad y Rendimiento</span>
+          </h1>
+          <p class="hero-description">
+            La deficiencia mineral es el factor silencioso más costoso en la ganadería de cría, leche y ceba. Conoce la ciencia de la biodisponibilidad, formulación balanceada, consumo voluntario ($50-120 \text{ g/día}$) y el balance crítico de macro y microminerales.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#calculadora" class="btn btn-primary btn-lg" id="btnHeroCalc">
+              <i class="fas fa-calculator"></i> Calculadora de Dosis y Costos
+            </a>
+            <a href="#infografia" class="btn btn-secondary btn-lg" id="btnHeroInfo">
+              <i class="fas fa-magnifying-glass-plus"></i> Ver Infografía Oficial
+            </a>
+            <a href="#skill-ia" class="btn btn-outline btn-lg" id="btnHeroSkill">
+              <i class="fas fa-terminal"></i> Consultar Skill IA
+            </a>
+          </div>
+
+          <!-- KPI Metrics Cards -->
+          <div class="hero-stats-grid">
+            <div class="stat-card">
+              <div class="stat-num">+28%</div>
+              <div class="stat-label">Tasa de Concepción y Preñez</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">50 - 120 g</div>
+              <div class="stat-label">Consumo Diario Recomendado</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">1.5 : 1</div>
+              <div class="stat-label">Relación Óptima $Ca:P$</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">100%</div>
+              <div class="stat-label">Basado en Estándares NRC/FEDNA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-col">
+          <div class="hero-card-glass">
+            <div class="card-glass-header">
+              <div class="glass-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="glass-title"><i class="fas fa-shield-halved"></i> SalBovino Core Feed Engine</span>
+            </div>
+            
+            <div class="glass-preview-content">
+              <div class="preview-hero-image-wrap">
+                <img src="Sales mineralizadas para bovinos.png" alt="Sales Mineralizadas para Bovinos - Infografía Zootecnia" class="hero-preview-img" id="heroThumbImg">
+                <div class="preview-overlay">
+                  <button class="btn btn-accent btn-sm" id="btnOpenLightHero"><i class="fas fa-expand"></i> Ampliar Infografía</button>
+                </div>
+              </div>
+              <div class="glass-caption">
+                <p><strong>Fórmula Base Seca Equilibrada:</strong> $60\%$ NaCl + $12\%$ Ca + $8\%$ P + Minerales Traza (Zn, Cu, Mn, Se, Co).</p>
+                <div class="mini-tags">
+                  <span class="tag">NRC Compliant</span>
+                  <span class="tag">Biodisponibilidad Alta</span>
+                  <span class="tag">Antagonismo Controlado</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUNDAMENTOS BIOLÓGICOS -->
+    <section class="section section-fundamentos" id="fundamentos">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fas fa-dna"></i> Fisiología Ruminante</span>
+          <h2 class="section-title">¿Por Qué son Indispensables las Sales Mineralizadas?</h2>
+          <p class="section-subtitle">
+            Los pastos tropicales y templados rara vez satisfacen simultáneamente todos los requerimientos de macro y microminerales. Las sales mineralizadas corrigen deficiencias subclínicas que reducen la ganancia de peso y la fertilidad.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon bg-emerald">
+              <i class="fas fa-shield-virus"></i>
+            </div>
+            <h3>Sistema Inmunológico Fuerte</h3>
+            <p>El Zinc ($Zn$), Cobre ($Cu$) y Selenio ($Se$) actúan como cofactores enzimáticos antioxidantes indispensables para la función fagocítica y la prevención de mastitis y metritis.</p>
+            <div class="benefit-metric">Reducción del 35% en incidencia de enfermedades</div>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon bg-blue">
+              <i class="fas fa-bone"></i>
+            </div>
+            <h3>Estructura Ósea y Salud Podal</h3>
+            <p>El Calcio ($Ca$) y Fósforo ($P$) conforman el 70% de las cenizas óseas. El $Zn$ y $S$ fortalecen la queratinización de pezuñas, reduciendo cojeras en ganado de confinamiento y pastoreo.</p>
+            <div class="benefit-metric">Menor desgaste y cojeras en terrenos pedregosos</div>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon bg-amber">
+              <i class="fas fa-venus-mars"></i>
+            </div>
+            <h3>Fertilidad y Eficiencia Reproductiva</h3>
+            <p>La carencia de $P$ y $Cu$ provoca anestros prolongados, reabsorciones embrionarias y celos silentes. Una suplementación balanceada acorta el intervalo entre partos (IEP).</p>
+            <div class="benefit-metric">+15 a 25 días menos en Días Abiertos</div>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon bg-purple">
+              <i class="fas fa-glass-water-droplet"></i>
+            </div>
+            <h3>Producción y Calidad de Leche</h3>
+            <p>Mantiene el balance osmótico, previene la hipomagnesemia (tetania de los pastos) y optimiza el conteo de sólidos totales y porcentaje de grasa butírica en tanque.</p>
+            <div class="benefit-metric">+1.2 a 2.5 Litros/vaca/día en picos de lactancia</div>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon bg-teal">
+              <i class="fas fa-arrow-trend-up"></i>
+            </div>
+            <h3>Ganancia de Peso y Conversión</h3>
+            <p>El Cobalto ($Co$) permite la síntesis de vitamina $B_{12}$ por las bacterias ruminales, activando la gluconeogénesis a partir del propionato y acelerando la ceba.</p>
+            <div class="benefit-metric">+80 a 150 g adicionales de GDP</div>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon bg-red">
+              <i class="fas fa-skull-crossbones"></i>
+            </div>
+            <h3>Prevención de "Pica" y Trastornos</h3>
+            <p>Evita el consumo anormal de piedras, tierra, huesos o madera (alotriofagia / pica), cuadro clínico característico del hambre de fósforo y sodio que conduce al botulismo.</p>
+            <div class="benefit-metric">Eliminación total del hábito de pica en el hato</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFOGRAFÍA TÉCNICA OFICIAL -->
+    <section class="section section-infografia" id="infografia">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fas fa-file-image"></i> Material Visual Oficial</span>
+          <h2 class="section-title">Infografía: Formulación de Sales Mineralizadas</h2>
+          <p class="section-subtitle">
+            Análisis detallado de los niveles recomendados, tipos de sales, ejemplo de formulación al 100% en base seca y pautas zootécnicas de suministro.
+          </p>
+        </div>
+
+        <div class="infografia-showcase-box">
+          <div class="infografia-visual-container">
+            <img src="Sales mineralizadas para bovinos.png" alt="Infografía completa de Sales Mineralizadas en Bovinos" class="infografia-main-img" id="mainInfografiaImg">
+            <div class="infografia-hover-bar">
+              <button class="btn btn-accent" id="btnZoomModal">
+                <i class="fas fa-search-plus"></i> Ver en Pantalla Completa
+              </button>
+              <a href="Sales mineralizadas para bovinos.png" download="Formulacion_Sales_Mineralizadas_Bovinos.png" class="btn btn-outline-light">
+                <i class="fas fa-download"></i> Descargar Imagen HD
+              </a>
+            </div>
+          </div>
+
+          <div class="infografia-details-side">
+            <div class="side-card">
+              <div class="side-card-header">
+                <i class="fas fa-list-check"></i>
+                <h4>Tipos de Sales Minerales</h4>
+              </div>
+              <ul class="type-list">
+                <li>
+                  <span class="type-name"><i class="fas fa-cube"></i> Inorgánicas</span>
+                  <p>Sulfatos, óxidos y carbonatos. Más económicas, base tradicional con biodisponibilidad estándar.</p>
+                </li>
+                <li>
+                  <span class="type-name"><i class="fas fa-link"></i> Orgánicas (Quelatadas)</span>
+                  <p>Minerales unidos a péptidos o aminoácidos. Máxima absorción intestinal y resistencia a antagonismos ruminales.</p>
+                </li>
+                <li>
+                  <span class="type-name"><i class="fas fa-bowl-rice"></i> Mezcla Completa</span>
+                  <p>Equilibrio total de macro y microelementos, lista para suministro a libre voluntad en saladeros de potrero.</p>
+                </li>
+                <li>
+                  <span class="type-name"><i class="fas fa-shapes"></i> Bloques o Licks</span>
+                  <p>Compactación con melaza o aglutinantes para regular el consumo voluntario en potreros lejanos o sabanas.</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="side-card side-card-formula">
+              <div class="side-card-header">
+                <i class="fas fa-flask"></i>
+                <h4>Ejemplo Formulación Base Seca (100%)</h4>
+              </div>
+              <div class="table-responsive-mini">
+                <table class="table-formula">
+                  <thead>
+                    <tr>
+                      <th>Ingrediente</th>
+                      <th>Fuente / Compuesto</th>
+                      <th>% Inclusión</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Cloruro de sodio</td><td>$NaCl$ puro</td><td>60.0%</td></tr>
+                    <tr><td>Calcio</td><td>$CaCO_3$ / Fosfato</td><td>12.0%</td></tr>
+                    <tr><td>Fósforo</td><td>Fosfato bicálcico</td><td>8.0%</td></tr>
+                    <tr><td>Magnesio</td><td>Óxido de magnesio</td><td>4.0%</td></tr>
+                    <tr><td>Potasio</td><td>Cloruro de potasio</td><td>3.0%</td></tr>
+                    <tr><td>Azufre</td><td>Azufre flor / sulfato</td><td>1.5%</td></tr>
+                    <tr><td>Zinc</td><td>Sulfato / Óxido Zn</td><td>0.2%</td></tr>
+                    <tr><td>Cobre</td><td>Sulfato de cobre</td><td>0.1%</td></tr>
+                    <tr><td>Manganeso</td><td>Óxido manganoso</td><td>0.1%</td></tr>
+                    <tr><td>Selenio</td><td>Selenito de sodio</td><td>0.02%</td></tr>
+                    <tr><td>Cobalto</td><td>Carbonato cobalto</td><td>0.005%</td></tr>
+                    <tr class="tr-total"><td>Total Mezcla</td><td>Base Seca</td><td>100.0%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPLORADOR DE ELEMENTOS MINERALES -->
+    <section class="section section-minerales" id="minerales">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fas fa-atom"></i> Tabla Nutricional Dinámica</span>
+          <h2 class="section-title">Macro y Microminerales Esenciales</h2>
+          <p class="section-subtitle">
+            Explora las concentraciones recomendadas, signos clínicos de carencia y rol metabólico en bovinos.
+          </p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="mineral-filter-tabs">
+          <button class="filter-btn active" data-filter="all"><i class="fas fa-border-all"></i> Todos (11)</button>
+          <button class="filter-btn" data-filter="macro"><i class="fas fa-cubes"></i> Macroelementos</button>
+          <button class="filter-btn" data-filter="micro"><i class="fas fa-sparkles"></i> Microelementos (Trazas)</button>
+        </div>
+
+        <div class="mineral-grid" id="mineralGrid">
+          <!-- Mineral cards dynamically generated & accessible -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ANTAGONISMOS E INTERACCIONES -->
+    <section class="section section-antagonismos" id="antagonismos">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fas fa-shuffle"></i> Bioquímica Ruminal</span>
+          <h2 class="section-title">Antagonismos e Interacciones Minerales Críticas</h2>
+          <p class="section-subtitle">
+            Un exceso de un mineral puede inducir la deficiencia secundaria de otro en el rumen o a nivel intestinal, aún cuando el pasto contenga niveles nominales adecuados.
+          </p>
+        </div>
+
+        <div class="antagonismos-grid">
+          <!-- Antagonismo 1: Mo - Cu - S -->
+          <div class="antagonismo-card">
+            <div class="antagonismo-badge danger">Antagonismo Clásico Severo</div>
+            <div class="antagonismo-title-wrap">
+              <span class="element-pair">$Mo \longleftrightarrow Cu \longleftrightarrow S$</span>
+              <h3>Complejo Tiomolibdato (Cobre Secuestrado)</h3>
+            </div>
+            <p class="antagonismo-desc">
+              Cuando el pasto o el agua contienen altos niveles de Molibdeno ($Mo > 3 \text{ ppm}$) y Azufre ($S > 0.3\%$), en el ambiente reductor del rumen se sintetizan <strong>tiomolibdatos</strong> ($MoS_4^{2-}$). Estos compuestos se ligan irreversiblemente al Cobre ($Cu$), impidiendo su absorción y provocando acromotriquia (pérdida de color en pelaje), diarreas fétidas y caída de preñez.
+            </p>
+            <div class="antagonismo-solution">
+              <strong><i class="fas fa-check-circle"></i> Corrección Zootécnica:</strong> Elevar el nivel de cobre en la sal ($Cu > 0.15\%$) o utilizar fuentes orgánicas (cobre quelatado) que pasen intactas el rumen.
+            </div>
+          </div>
+
+          <!-- Antagonismo 2: Ca : P -->
+          <div class="antagonismo-card">
+            <div class="antagonismo-badge warning">Relación Fisiológica Estricta</div>
+            <div class="antagonismo-title-wrap">
+              <span class="element-pair">$Ca : P \quad (1.5:1 \text{ a } 2:1)$</span>
+              <h3>Desbalance Calcio - Fósforo</h3>
+            </div>
+            <p class="antagonismo-desc">
+              Un exceso marcado de Calcio ($Ca$) en dietas con leguminosas inhibe la absorción intestinal de Fósforo ($P$) y Zinc ($Zn$). Por el contrario, un exceso de Fósforo desmineraliza el hueso mediante hiperparatiroidismo nutricional secundario. En vacas secas, un exceso de $Ca$ predispone a la hipocalcemia posparto (fiebre de leche).
+            </p>
+            <div class="antagonismo-solution">
+              <strong><i class="fas fa-check-circle"></i> Corrección Zootécnica:</strong> Mantener una relación $Ca:P$ de $1.5:1$ a $2:1$ en animales en pastoreo y restringir el calcio catiónico en vacas en preparto.
+            </div>
+          </div>
+
+          <!-- Antagonismo 3: K - Mg -->
+          <div class="antagonismo-card">
+            <div class="antagonismo-badge danger">Riesgo de Tetania de los Pastos</div>
+            <div class="antagonismo-title-wrap">
+              <span class="element-pair">$K \longleftrightarrow Mg$</span>
+              <h3>Inhibición de Magnesio por Exceso de Potasio</h3>
+            </div>
+            <p class="antagonismo-desc">
+              Pastos tiernos fertilizados con nitrógeno o potasio contienen altos niveles de $K$ que despolarizan el epitelio ruminal, bloqueando el transporte activo de Magnesio ($Mg$). Esto provoca la letal <em>tetania hipomagnesémica</em> (marcha tambaleante, convulsiones y muerte súbita en vacas lecheras de alta producción).
+            </p>
+            <div class="antagonismo-solution">
+              <strong><i class="fas fa-check-circle"></i> Corrección Zootécnica:</strong> Ofrecer sales mineralizadas con alto contenido de Magnesio ($4-8\% \text{ Mg}$) previo a la época de rebrote de lluvias.
+            </div>
+          </div>
+
+          <!-- Antagonismo 4: NaCl Regulador -->
+          <div class="antagonismo-card">
+            <div class="antagonismo-badge info">Regulador Fisiológico de Ingesta</div>
+            <div class="antagonismo-title-wrap">
+              <span class="element-pair">$NaCl \quad (55 - 65\%)$</span>
+              <h3>Cloruro de Sodio como Limitador del Consumo</h3>
+            </div>
+            <p class="antagonismo-desc">
+              El ganado busca instintivamente el sodio para saciar su balance electrolítico. El cloruro de sodio actúa como el vehículo y modulador del consumo: si la sal tiene poco $NaCl$, el ganado puede sobreconsumir fósforo y micronutrientes costosos; si tiene demasiado, el consumo diario baja por debajo de la dosis terapéutica.
+            </p>
+            <div class="antagonismo-solution">
+              <strong><i class="fas fa-check-circle"></i> Corrección Zootécnica:</strong> Monitorear la salinidad del agua de bebida. En aguas salobres, debe reducirse el $NaCl$ de la mezcla para incentivar el consumo.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALCULADORA DE CONSUMO Y COSTOS SALBOVINO -->
+    <section class="section section-calculadora" id="calculadora">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fas fa-calculator"></i> Herramienta Práctica de Campo</span>
+          <h2 class="section-title">Calculadora de Suplementación Mineral</h2>
+          <p class="section-subtitle">
+            Estima el consumo diario, la cantidad de bultos necesarios para tu hato y el presupuesto requerido según categoría zootécnica y duración del ciclo.
+          </p>
+        </div>
+
+        <div class="calculator-wrapper">
+          <div class="calc-inputs-col">
+            <h3 class="calc-box-title"><i class="fas fa-sliders"></i> Parámetros de tu Hato</h3>
+            
+            <div class="form-group">
+              <label for="calcCategoria"><i class="fas fa-cow"></i> Categoría Zootécnica</label>
+              <select id="calcCategoria" class="form-control">
+                <option value="cria">Vacas de Cría / Nodrizas (Requerimiento alto de P)</option>
+                <option value="levante">Levante / Novillas de Reemplazo (Desarrollo esquelético)</option>
+                <option value="ceba">Ceba / Engorde en Pastoreo (Ganancia de peso)</option>
+                <option value="leche" selected>Vaca Leche Especializada (Alta exigencia Ca/Mg/P)</option>
+                <option value="doble">Doble Propósito Tropical</option>
+                <option value="toro">Toros Reproductores (Exigencia seminal Zn/Se)</option>
+              </select>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="calcAnimales"><i class="fas fa-hashtag"></i> Número de Cabezas</label>
+                <input type="number" id="calcAnimales" class="form-control" value="80" min="1" max="10000">
+              </div>
+              <div class="form-group">
+                <label for="calcDias"><i class="fas fa-calendar-days"></i> Días de Suplementación</label>
+                <input type="number" id="calcDias" class="form-control" value="90" min="1" max="730">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="label-with-val">
+                <label for="calcGramos"><i class="fas fa-weight-scale"></i> Consumo Estimado por Cabeza</label>
+                <span class="slider-display" id="valGramos">90 g/día</span>
+              </div>
+              <input type="range" id="calcGramos" class="range-slider" min="40" max="150" step="5" value="90">
+              <div class="range-marks">
+                <span>40g (Mínimo ceba)</span>
+                <span>80-100g (Óptimo)</span>
+                <span>150g (Máximo lechero)</span>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="calcPorcPhosphorus"><i class="fas fa-percent"></i> % Fósforo ($P$) en la Sal</label>
+                <select id="calcPorcPhosphorus" class="form-control">
+                  <option value="4">4% P (Ceba en suelos fértiles)</option>
+                  <option value="6">6% P (Doble propósito estándar)</option>
+                  <option value="8" selected>8% P (Cría y leche sabanas tropicales)</option>
+                  <option value="10">10% P (Suelos ácidos / Alta preñez)</option>
+                  <option value="12">12% P (Cría intensiva / Donadoras)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="calcBultoKg"><i class="fas fa-box-archive"></i> Peso del Bulto</label>
+                <select id="calcBultoKg" class="form-control">
+                  <option value="25">25 kg</option>
+                  <option value="40" selected>40 kg (Estándar)</option>
+                  <option value="50">50 kg</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="calcPrecioBulto"><i class="fas fa-dollar-sign"></i> Precio por Bulto ($ Moneda Local)</label>
+              <input type="number" id="calcPrecioBulto" class="form-control" value="125000" step="1000">
+            </div>
+
+            <button type="button" class="btn btn-primary btn-block" id="btnRecalcular">
+              <i class="fas fa-rotate"></i> Actualizar Estimación
+            </button>
+          </div>
+
+          <div class="calc-results-col">
+            <h3 class="calc-box-title"><i class="fas fa-chart-pie"></i> Dictamen y Presupuesto</h3>
+            
+            <div class="results-kpi-grid">
+              <div class="res-kpi-item">
+                <span class="kpi-title">Consumo Diario del Hato</span>
+                <span class="kpi-val" id="resKgDia">7.20 kg/día</span>
+              </div>
+              <div class="res-kpi-item">
+                <span class="kpi-title">Consumo Total Período</span>
+                <span class="kpi-val" id="resKgTotal">648 kg</span>
+              </div>
+              <div class="res-kpi-item highlight">
+                <span class="kpi-title">Bultos Requeridos</span>
+                <span class="kpi-val" id="resBultos">17 Bultos</span>
+                <span class="kpi-sub" id="resBultosExacto">(16.2 bultos teóricos)</span>
+              </div>
+              <div class="res-kpi-item highlight-price">
+                <span class="kpi-title">Inversión Total Estimada</span>
+                <span class="kpi-val" id="resInversionTotal">$ 2,125,000</span>
+              </div>
+            </div>
+
+            <div class="cost-per-head-bar">
+              <div class="cph-text">
+                <strong>Costo por Animal / Día:</strong>
+                <span id="resCostoAnimalDia">$ 295 / cabeza / día</span>
+              </div>
+              <div class="cph-compare">
+                <i class="fas fa-circle-info"></i> Retorno estimado en leche/peso: <strong>4.8x</strong> la inversión en sales
+              </div>
+            </div>
+
+            <div class="calc-alert-box" id="calcAlertBox">
+              <div class="alert-icon"><i class="fas fa-clipboard-check"></i></div>
+              <div class="alert-content">
+                <h4 id="calcAlertTitle">Recomendación Zootécnica para Vacas de Leche</h4>
+                <p id="calcAlertText">
+                  Con una fórmula de 8% de Fósforo y 90 g/vaca/día, se cubren 7.2 g de $P$ elemental directo. Monitorea comederos techados para evitar lixiviación por lluvias.
+                </p>
+              </div>
+            </div>
+
+            <div class="saladero-rules">
+              <h4><i class="fas fa-warehouse"></i> Reglas de Manejo en Saladeros:</h4>
+              <ul>
+                <li><strong>Capacidad:</strong> 3 a 5 comederos por cada 100 cabezas (10-15 cm lineales por animal).</li>
+                <li><strong>Ubicación:</strong> A 150 - 300 metros de las aguadas para fomentar el pastoreo uniforme.</li>
+                <li><strong>Frecuencia:</strong> Llenado semanal con sal fresca para mantener la palatabilidad.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILL SALBOVINO PRO (INTEGRACIÓN IA / PROMPTS) -->
+    <section class="section section-skill" id="skill-ia">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag badge-ai"><i class="fas fa-brain"></i> Inteligencia Zootécnica Aplicada</span>
+          <h2 class="section-title">Skill Oficial: SalBovino Pro</h2>
+          <p class="section-subtitle">
+            Habilidad técnica configurada para Gemini y asistentes de IA. Diseña, audita y ajusta planes de nutrición mineral con rigor fisiológico, fórmulas LaTeX y criterios NRC.
+          </p>
+        </div>
+
+        <div class="skill-layout">
+          <!-- Left: Skill Card Details -->
+          <div class="skill-specs-card">
+            <div class="skill-card-top">
+              <div class="skill-badge-header">
+                <i class="fas fa-microchip"></i> Antigravity Custom Skill
+              </div>
+              <h3>SalBovino Pro</h3>
+              <p class="skill-role">Consultor Técnico Experto en Metabolismo Mineral y Sales Bovinas</p>
+            </div>
+
+            <div class="skill-rules-list">
+              <h4><i class="fas fa-gavel"></i> Reglas de Operación del Sistema:</h4>
+              <ol>
+                <li><strong>Rigor Fisiológico:</strong> Biodisponibilidad, antagonismos ($Mo-Cu-S$, $K-Mg$) y normas NRC/FEDNA.</li>
+                <li><strong>Enfoque Práctico de Consumo:</strong> Gramos/animal/día según categoría y oferta forrajera.</li>
+                <li><strong>Notación Científica:</strong> Sintaxis LaTeX obligatoria para todos los elementos químicos ($P$, $Ca$, $NaCl$).</li>
+                <li><strong>Diagnóstico Integral:</strong> Relación de signos clínicos (pica, cojeras, anestro) con fórmulas de saladeros.</li>
+              </ol>
+            </div>
+
+            <!-- System Prompt Copy Box -->
+            <div class="prompt-box-wrapper">
+              <div class="prompt-box-header">
+                <span><i class="fas fa-terminal"></i> System Prompt (Instrucción Base)</span>
+                <button class="btn btn-copy-prompt" id="btnCopyPrompt" title="Copiar al portapapeles">
+                  <i class="fas fa-copy"></i> Copiar Prompt
+                </button>
+              </div>
+              <pre class="prompt-code-block" id="systemPromptText">"Actúa como un Zootecnista experto en metabolismo mineral y suplementación de rumiantes, con amplia experiencia en ganadería de cría, levante, ceba y lechería. Tu objetivo es asesorar a profesionales y productores en la selección, consumo y formulación de sales mineralizadas, identificando deficiencias de macro y microminerales y su impacto zootécnico.
+
+Reglas de Operación:
+1. Rigor Técnico y Fisiológico: Maneja con precisión conceptos de biodisponibilidad, relaciones mineralógicas (ej. relación $Ca:P$, antagonismos como $Mo-Cu-S$) y requerimientos según el NRC / NASEM.
+2. Enfoque Práctico de Consumo: Considera siempre el consumo voluntario esperado de sal mineralizada por categoría animal (expresado en gramos/animal/día) y los factores que lo afectan.
+3. Notación Científica: Utiliza exclusivamente sintaxis LaTeX ($) para todas las fórmulas, elementos químicos o proporciones (ej. $P$, $Ca$, $NaCl$, $Cu$, $Zn$, $Se$).
+4. Diagnóstico Integral: Relaciona los signos clínicos de deficiencia o toxicidad (pica, osteofibrosis, baja tasa de concepción, problemas podales) con las estrategias correctivas."</pre>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Prompt Tester / Simulator -->
+          <div class="skill-simulator-card">
+            <div class="sim-header">
+              <div class="sim-status">
+                <span class="status-indicator online"></span>
+                <span>Simulador de Consultas SalBovino Pro</span>
+              </div>
+              <span class="sim-engine">Gemini 3.8 Flash • High Accuracy</span>
+            </div>
+
+            <div class="sim-body">
+              <label class="sim-label"><i class="fas fa-comments"></i> Selecciona o formula una pregunta técnica:</label>
+              
+              <div class="preset-prompts-chips">
+                <button class="chip-prompt" data-query="ca-p">Relación $Ca:P$ en vacas de leche</button>
+                <button class="chip-prompt" data-query="suelos-acidos">Fósforo en sabanas ácidas</button>
+                <button class="chip-prompt" data-query="tiomolibdato">Antagonismo Azufre-Molibdeno-Cobre</button>
+                <button class="chip-prompt" data-query="consumo-saladero">Bajo consumo en saladeros</button>
+              </div>
+
+              <div class="sim-chat-area" id="simChatArea">
+                <div class="chat-msg ai-msg">
+                  <div class="msg-avatar"><i class="fas fa-cow"></i></div>
+                  <div class="msg-bubble">
+                    <p><strong>SalBovino Pro listo.</strong> Selecciona una de las consultas de arriba o escribe una duda nutricional para obtener el diagnóstico zootécnico con referencias y fórmulas.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sim-input-row">
+                <input type="text" id="simCustomInput" class="sim-input" placeholder="Pregunta sobre formulación, NRC, Pica o minerales...">
+                <button class="btn btn-primary" id="btnSimSend"><i class="fas fa-paper-plane"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTROL DE CALIDAD, LABORATORIO Y FOTOS -->
+    <section class="section section-laboratorio" id="laboratorio">
+      <div class="container">
+        <div class="lab-grid">
+          <div class="lab-media-col">
+            <div class="lab-gif-frame">
+              <img src="Professional_smiling_in_laboratory_20261015134715.gif" alt="Profesional zootecnista y químico en laboratorio de control de calidad mineral" class="lab-gif-img">
+              <div class="lab-badge-floating">
+                <i class="fas fa-flask-vial"></i> Control de Calidad Espectrofotometría
+              </div>
+            </div>
+          </div>
+
+          <div class="lab-text-col">
+            <span class="section-tag"><i class="fas fa-microscope"></i> Rigor Científico y Trazabilidad</span>
+            <h2 class="section-title">Garantía Nutricional y Análisis Químico</h2>
+            <p>
+              Una formulación sobre el papel no sirve si la fuente mineral carece de pureza o sufre lixiviación. En SalBovino Pro promovemos el análisis bromatológico del pasto y la espectrometría de absorción atómica para verificar la concentración real de microelementos traza ($Cu, Zn, Co, Se$).
+            </p>
+
+            <div class="lab-points">
+              <div class="lab-point-item">
+                <div class="point-icon"><i class="fas fa-certificate"></i></div>
+                <div>
+                  <h4>Biodisponibilidad Comprobada</h4>
+                  <p>Distinción rigurosa entre óxidos de baja absorción (ej. óxido de cobre) y sulfatos u organominerales quelatados con glicina o metionina.</p>
+                </div>
+              </div>
+
+              <div class="lab-point-item">
+                <div class="point-icon"><i class="fas fa-shield-cat"></i></div>
+                <div>
+                  <h4>Seguridad Metabólica y Cero Toxicidad</h4>
+                  <p>Monitoreo estricto de elementos con estrecho margen de seguridad como el Selenio ($Se < 0.03\%$) y Cobre en ovinos/bovinos mixtos para evitar intoxicaciones acumulativas.</p>
+                </div>
+              </div>
+
+              <div class="lab-point-item">
+                <div class="point-icon"><i class="fas fa-chart-line"></i></div>
+                <div>
+                  <h4>Auditoría de Comedero en Campo</h4>
+                  <p>Cálculo de la desviación entre el consumo teórico esperado ($g/\text{animal}/\text{día}$) y la desaparición real en saladero de potrero.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BIBLIOGRAFÍA CIENTÍFICA -->
+    <section class="section section-bibliografia" id="bibliografia">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fas fa-book-open"></i> Literatura & Referencias</span>
+          <h2 class="section-title">Bibliografía Científica y Fuentes Técnicas</h2>
+          <p class="section-subtitle">
+            Base documental rigurosa citada bajo normas internacionales APA (7.ª edición), manuales del NRC/NASEM y tablas de nutrición animal reconocidas mundialmente.
+          </p>
+        </div>
+
+        <div class="biblio-controls">
+          <div class="biblio-search-wrap">
+            <i class="fas fa-search"></i>
+            <input type="text" id="biblioSearch" placeholder="Filtrar por autor, organismo (NRC, FEDNA, McDowell) o palabra clave...">
+          </div>
+          <div class="biblio-cat-buttons">
+            <button class="bib-cat active" data-cat="all">Todas las Fuentes</button>
+            <button class="bib-cat" data-cat="normas">Normativas (NRC/FEDNA)</button>
+            <button class="bib-cat" data-cat="clasicos">Libros Clásicos</button>
+            <button class="bib-cat" data-cat="tropical">Zootecnia Tropical</button>
+          </div>
+        </div>
+
+        <div class="biblio-list" id="biblioList">
+          <!-- Reference 1 -->
+          <div class="biblio-card" data-cat="normas">
+            <div class="biblio-tag">Comité Internacional</div>
+            <div class="biblio-content">
+              <h4 class="biblio-title">NASEM - National Academies of Sciences, Engineering, and Medicine (2016)</h4>
+              <p class="biblio-citation">
+                <em>Nutrient Requirements of Beef Cattle: Eighth Revised Edition</em>. Washington, DC: The National Academies Press. https://doi.org/10.17226/19014.
+              </p>
+              <div class="biblio-desc">
+                Estándar mundial para los requerimientos cuantitativos de macroelementos ($Ca, P, Mg, K, Na, Cl, S$) y microminerales ($Co, Cu, I, Fe, Mn, Se, Zn$) en ganado de carne en distintas fases fisiológicas.
+              </div>
+            </div>
+            <div class="biblio-actions">
+              <button class="btn-copy-cite" data-cite="NASEM. (2016). Nutrient Requirements of Beef Cattle (8th ed.). The National Academies Press."><i class="fas fa-copy"></i> Citar APA</button>
+            </div>
+          </div>
+
+          <!-- Reference 2 -->
+          <div class="biblio-card" data-cat="normas">
+            <div class="biblio-tag">Comité Internacional</div>
+            <div class="biblio-content">
+              <h4 class="biblio-title">NASEM - National Academies of Sciences, Engineering, and Medicine (2021)</h4>
+              <p class="biblio-citation">
+                <em>Nutrient Requirements of Dairy Cattle: Eighth Revised Edition</em>. Washington, DC: The National Academies Press. https://doi.org/10.17226/25806.
+              </p>
+              <div class="biblio-desc">
+                Revisión exhaustiva del metabolismo del calcio en la transición de la vaca lechera, balance anión-catión de la dieta (DCAD) y prevención de hipocalcemia puerperal clínica y subclínica.
+              </div>
+            </div>
+            <div class="biblio-actions">
+              <button class="btn-copy-cite" data-cite="NASEM. (2021). Nutrient Requirements of Dairy Cattle (8th ed.). The National Academies Press."><i class="fas fa-copy"></i> Citar APA</button>
+            </div>
+          </div>
+
+          <!-- Reference 3 -->
+          <div class="biblio-card" data-cat="normas">
+            <div class="biblio-tag">Manual Iberoamericano</div>
+            <div class="biblio-content">
+              <h4 class="biblio-title">FEDNA - Fundación Española para el Desarrollo de la Nutrición Animal (2019)</h4>
+              <p class="biblio-citation">
+                De Blas, C., Mateos, G. G., & García-Rebollar, P. <em>Tablas FEDNA de composición y valor nutritivo de alimentos para la fabricación de piensos compuestos</em> (4.ª ed.). Madrid, España: FEDNA.
+              </p>
+              <div class="biblio-desc">
+                Valores de biodisponibilidad y contenido elemental de las fuentes minerales comerciales: fosfatos monocálcicos, dicálcicos, carbonatos de calcio y sulfatos quelatados.
+              </div>
+            </div>
+            <div class="biblio-actions">
+              <button class="btn-copy-cite" data-cite="FEDNA. (2019). Tablas FEDNA de composición y valor nutritivo de alimentos. FEDNA, Madrid."><i class="fas fa-copy"></i> Citar APA</button>
+            </div>
+          </div>
+
+          <!-- Reference 4 -->
+          <div class="biblio-card" data-cat="clasicos">
+            <div class="biblio-tag">Libro de Referencia Clásica</div>
+            <div class="biblio-content">
+              <h4 class="biblio-title">McDowell, L. R. (2003)</h4>
+              <p class="biblio-citation">
+                <em>Minerals in Animal and Human Nutrition</em> (2.ª ed.). Amsterdam: Elsevier Science B.V.
+              </p>
+              <div class="biblio-desc">
+                Obra cumbre sobre carencias minerales en el trópico, sintomatología de pica, calcificación ectópica, antagonismos tiomolibdato y formulación de sales para pastoreo libre.
+              </div>
+            </div>
+            <div class="biblio-actions">
+              <button class="btn-copy-cite" data-cite="McDowell, L. R. (2003). Minerals in Animal and Human Nutrition (2nd ed.). Elsevier."><i class="fas fa-copy"></i> Citar APA</button>
+            </div>
+          </div>
+
+          <!-- Reference 5 -->
+          <div class="biblio-card" data-cat="clasicos">
+            <div class="biblio-tag">Libro de Referencia Clásica</div>
+            <div class="biblio-content">
+              <h4 class="biblio-title">Underwood, E. J., & Suttle, N. F. (2010)</h4>
+              <p class="biblio-citation">
+                <em>The Mineral Nutrition of Livestock</em> (4.ª ed.). Wallingford, UK: CAB International.
+              </p>
+              <div class="biblio-desc">
+                Tratado exhaustivo de bioquímica nutricional, funciones catalíticas de los microelementos traza ($Cu, Co, Se, Zn, I$) y mecanismos de absorción y excreción en rumiantes.
+              </div>
+            </div>
+            <div class="biblio-actions">
+              <button class="btn-copy-cite" data-cite="Underwood, E. J., & Suttle, N. F. (2010). The Mineral Nutrition of Livestock (4th ed.). CAB International."><i class="fas fa-copy"></i> Citar APA</button>
+            </div>
+          </div>
+
+          <!-- Reference 6 -->
+          <div class="biblio-card" data-cat="tropical">
+            <div class="biblio-tag">Investigación en Trópico</div>
+            <div class="biblio-content">
+              <h4 class="biblio-title">Miles, W. H., & McDowell, L. R. (CIAT - Centro Internacional de Agricultura Tropical)</h4>
+              <p class="biblio-citation">
+                <em>Deficiencias minerales en ganado de carne pastoreando en sabanas tropicales de América Latina</em>. Publicación técnica CIAT / Universidad de Florida.
+              </p>
+              <div class="biblio-desc">
+                Estudio epidemiológico de pastos en suelos ácidos oxisoles y ultisoles de América Latina; demostración del incremento del 40% en peso vivo tras suplementación sistemática con fósforo.
+              </div>
+            </div>
+            <div class="biblio-actions">
+              <button class="btn-copy-cite" data-cite="Miles, W. H., & McDowell, L. R. Deficiencias minerales en ganado de sabanas tropicales. CIAT."><i class="fas fa-copy"></i> Citar APA</button>
+            </div>
+          </div>
+
+          <!-- Reference 7 -->
+          <div class="biblio-card" data-cat="tropical">
+            <div class="biblio-tag">Manual Técnico Aplicado</div>
+            <div class="biblio-content">
+              <h4 class="biblio-title">Agrosavia - Corporación Colombiana de Investigación Agropecuaria (2018)</h4>
+              <p class="biblio-citation">
+                Sánchez, H. L., & Mojica, J. E. <em>Guía práctica de suplementación mineral estratégica para hatos de cría y doble propósito en el trópico bajo</em>. Mosquera: Agrosavia.
+              </p>
+              <div class="biblio-desc">
+                Buenas prácticas en la fabricación de comederos protegidos de la lluvia, auditoría de consumo voluntario de sal y mezclas minerales con azufre para control ectoparasitario.
+              </div>
+            </div>
+            <div class="biblio-actions">
+              <button class="btn-copy-cite" data-cite="Agrosavia. (2018). Guía de suplementación mineral estratégica en trópico bajo. Agrosavia."><i class="fas fa-copy"></i> Citar APA</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL LIGHTBOX FOR INFOGRAFIA -->
+  <div class="modal-lightbox" id="modalLightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+    <div class="lightbox-container">
+      <div class="lightbox-header">
+        <div class="lightbox-title"><i class="fas fa-image"></i> Formulación de Sales Mineralizadas para Bovinos (HD)</div>
+        <div class="lightbox-actions">
+          <a href="Sales mineralizadas para bovinos.png" download class="btn btn-sm btn-outline-light"><i class="fas fa-download"></i> Descargar</a>
+          <button class="lightbox-close" id="lightboxCloseBtn" aria-label="Cerrar modal">&times;</button>
+        </div>
+      </div>
+      <div class="lightbox-body">
+        <img src="Sales mineralizadas para bovinos.png" alt="Infografía de sales mineralizadas en bovinos ampliada" class="lightbox-img" id="lightboxImg">
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-notification" id="toastNotification">
+    <i class="fas fa-check-circle toast-icon"></i>
+    <span class="toast-text" id="toastText">Texto copiado con éxito</span>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col-brand">
+        <div class="brand-logo footer-logo">
+          <div class="logo-icon-wrap">
+            <i class="fas fa-cow logo-icon"></i>
+          </div>
+          <div class="logo-text">
+            <span class="brand-name">SalBovino<span class="brand-accent">Pro</span></span>
+            <span class="brand-tag">Nutrición & Zootecnia Científica</span>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Plataforma técnica interactiva dedicada al estudio, formulación y auditoría de la suplementación con sales mineralizadas en ganadería bovina. Diseñada con estándares NRC y FEDNA.
+        </p>
+        <div class="footer-badges">
+          <span class="badge badge-subtle"><i class="fas fa-circle-check"></i> NRC Compliant</span>
+          <span class="badge badge-subtle"><i class="fas fa-leaf"></i> Ganadería Sostenible</span>
+          <span class="badge badge-subtle"><i class="fas fa-shield"></i> Bienestar Animal</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Navegación Rápida</h4>
+        <ul class="footer-links">
+          <li><a href="#fundamentos"><i class="fas fa-angle-right"></i> Fundamentos Fisiológicos</a></li>
+          <li><a href="#infografia"><i class="fas fa-angle-right"></i> Infografía Técnica</a></li>
+          <li><a href="#minerales"><i class="fas fa-angle-right"></i> Macro y Microelementos</a></li>
+          <li><a href="#antagonismos"><i class="fas fa-angle-right"></i> Antagonismos Ruminales</a></li>
+          <li><a href="#calculadora"><i class="fas fa-angle-right"></i> Calculadora de Dosis</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Recursos Técnicos</h4>
+        <ul class="footer-links">
+          <li><a href="#skill-ia"><i class="fas fa-angle-right"></i> Skill SalBovino Pro (IA)</a></li>
+          <li><a href="#laboratorio"><i class="fas fa-angle-right"></i> Control de Laboratorio</a></li>
+          <li><a href="#bibliografia"><i class="fas fa-angle-right"></i> Bibliografía y Citas APA</a></li>
+          <li><a href="skill_suplementaci_n_mineral_bovina.md" download><i class="fas fa-angle-right"></i> Descargar Documento Skill</a></li>
+          <li><a href="README.md"><i class="fas fa-angle-right"></i> Ver Repositorio y Badges</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Aviso Zootécnico</h4>
+        <p class="footer-disclaimer">
+          Las formulaciones y dosis presentadas son guías técnicas de referencia basadas en literatura científica. Se aconseja siempre contrastar con el análisis bromatológico del forraje y la recomendación de un zootecnista o médico veterinario especializado.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 SalBovino Pro • Nutrición Mineral Bovina de Precisión. Todos los derechos reservados.</p>
+        <div class="footer-sublinks">
+          <span>Ciencia · Producción · Bienestar</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
